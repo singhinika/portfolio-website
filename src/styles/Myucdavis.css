@@ -1,0 +1,322 @@
+.case-study {
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: 'Inter', sans-serif;
+  padding-top: 5rem;
+}
+
+.cover-image {
+  width: 65%;
+  max-width: 800px;
+  margin: 0 auto 2rem auto;
+}
+
+.cover-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.case-study section {
+  margin-bottom: 4rem;
+  padding: 0 4rem;
+}
+
+.overview {
+  padding-top: 4rem;
+}
+
+.case-study h1,
+.case-study h2 {
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.case-study h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+  font-weight: 500;
+}
+
+.case-study p,
+.pain-points li,
+.next-steps li,
+.point p,
+.persona-info li,
+.user-journey li {
+  line-height: 1.6;
+  color: #1a1a1a;
+  margin-bottom: 1rem;
+}
+
+.overview-grid h3 {
+  margin-top: 2rem;
+}
+
+/* Overview Section */
+.overview-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.overview-grid h2 {
+  margin-top: 0;
+}
+
+.project-details {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* Redesign Section */
+.redesign-row {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-bottom: 4rem;
+  align-items: center;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.redesign-video {
+  flex: 1;
+  max-width: 300px;
+  min-height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8f8f8;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.demo-video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 20px;
+  background: #f8f8f8;
+  display: block;
+}
+
+.redesign-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.redesign-text {
+  max-width: 400px;
+}
+
+.redesign-points {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.redesign-point {
+  background: #f8f8f8;
+  padding: 2rem;
+  border-radius: 20px;
+  transition: transform 0.3s ease;
+}
+
+.redesign-point:hover {
+  transform: translateY(-5px);
+}
+
+.redesign-point h4 {
+  color: #2A9D8F;
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+
+.redesign-point p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .redesign-row {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .redesign-image {
+    order: -1;
+  }
+}
+
+/* Process Section */
+.pain-points ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 2rem;
+}
+
+.pain-points li {
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.pain-points li:before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #2A9D8F;
+}
+
+/* Persona Section */
+.persona-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  margin-top: 1.5rem;
+  align-items: center;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.avatar-placeholder {
+  width: 350px;
+  height: 350px;
+  margin: 0 auto;
+}
+
+.avatar-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  padding: 1rem;
+}
+
+.chart-placeholder {
+  background-color: #f5f5f5;
+  border: 2px dashed #ddd;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.wireframes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 180px);
+  gap: 2rem;
+  margin-top: 2rem;
+  justify-content: center;
+}
+
+.wireframes-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.wireframes-grid img:hover {
+  transform: translateY(-5px);
+}
+
+.persona-info ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 2rem;
+}
+
+.persona-info li {
+  margin-bottom: 1rem;
+}
+
+.user-journey ol {
+  list-style: none;
+  padding: 0;
+  counter-reset: journey-counter;
+}
+
+.user-journey ol li {
+  margin-bottom: 1rem;
+  padding-left: 2rem;
+  position: relative;
+}
+
+.user-journey ol li::before {
+  counter-increment: journey-counter;
+  content: counter(journey-counter) ".";
+  position: absolute;
+  left: 0;
+  font-weight: 500;
+}
+
+.persona-info h4 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.user-journey h4 {
+  margin-bottom: 1rem;
+}
+
+/* Redesign Section */
+.redesign-points {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.point {
+  background-color: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+/* Reflection Section */
+.next-steps ul {
+  list-style: none;
+  padding: 0;
+}
+
+.next-steps li {
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.next-steps li:before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: #2A9D8F;
+}
+
+@media (max-width: 768px) {
+  .overview-grid,
+  .project-details,
+  .persona-details,
+  .redesign-points {
+    grid-template-columns: 1fr;
+  }
+
+  .case-study {
+    padding: 1rem;
+  }
+}

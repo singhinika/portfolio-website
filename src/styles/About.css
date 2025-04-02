@@ -1,0 +1,14 @@
+.about {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.bio {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-top: 2rem;
+  max-width: 500px;
+}
