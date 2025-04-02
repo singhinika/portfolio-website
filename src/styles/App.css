@@ -31,43 +31,63 @@
 
 .nav-link {
   text-decoration: none;
-  color: var(--text-color);
+  color: #2A9D8F;
+  transition: color 0.2s ease;
+}
+
+.nav > .nav-link {
   font-weight: 700;
   font-size: 1.8rem;
   font-family: 'Fuzzy Bubbles', cursive;
   letter-spacing: 0.5px;
 }
 
-.nav-right {
-  display: flex;
-  gap: 1rem;
+.nav-right .nav-link {
+  font-size: 0.9rem;
+  font-weight: 500;
 }
 
-
-
-.nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
+.nav-link:hover {
+  color: #1e7268;
 }
 
 .nav-right {
+  display: flex;
   gap: 2rem;
 }
 
-.nav-right a {
-  text-decoration: none;
-  color: #2A9D8F;
-  font-size: 0.9rem;
-  font-weight: 500;
-  transition: color 0.2s ease;
-}
+
 
 .nav-right a:hover {
   color: #1e7268;
+}
+
+/* Case Study Shared Styles */
+.case-study h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  font-style: italic;
+  margin-bottom: 1rem;
+  color: #2A2A2A;
+}
+
+.case-study h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #2A2A2A;
+}
+
+.case-study h4 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  color: #2A2A2A;
+}
+
+.case-study p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 1.5rem;
 }

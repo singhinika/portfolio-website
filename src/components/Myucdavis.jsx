@@ -8,6 +8,7 @@ import userImage from '../assets/user.png';
 import wireframe1 from '../assets/wireframe1.png';
 import wireframe2 from '../assets/wireframe2.png';
 import wireframe3 from '../assets/wireframe3.png';
+import myucdorgImage from '../assets/myucdorg.png';
 
 function Myucdavis() {
   useEffect(() => {
@@ -20,7 +21,7 @@ function Myucdavis() {
         <img src={myucdavisImage} alt="myucdavis app interface" />
       </div>
       <section className="overview">
-        <h1>Overview</h1>
+        <h2>Overview</h2>
         <div className="overview-grid">
           <div className="challenge">
             <h3>Challenge</h3>
@@ -50,20 +51,24 @@ function Myucdavis() {
 
       <section className="background">
         <h2>Background</h2>
-        <h3>myucdavis</h3>
         <p>The original myucdavis website was designed primarily for desktop use, and its mobile version was not optimized for small screens. The website's user interface was cluttered, with too many options displayed in a non-intuitive layout. Many students found it difficult to navigate the various sections of the site, and it was unclear what each function was for. As a result, students often felt frustrated and had to rely on multiple websites and external resources for the services they needed.</p>
       </section>
 
       <section className="process">
         <h2>Process</h2>
-        <div className="pain-points">
-          <h3>User Pain Points</h3>
-          <ul>
+        <div className="pain-points-container">
+          <div className="pain-points">
+            <h3>User Pain Points</h3>
+            <ul>
             <li><strong>Cluttered Interface:</strong> Students felt overwhelmed by the number of options and sections on the homepage.</li>
             <li><strong>Unclear Functionality:</strong> Many students were unsure about what many features of the website did.</li>
             <li><strong>Mobile Experience:</strong> The website was not optimized for mobile, so students had a poor experience when trying to access it on their phones.</li>
             <li><strong>Accessibility Issues:</strong> There were complaints about the website's color scheme, font size, and the difficulty of reading text for users with visual impairments.</li>
           </ul>
+          </div>
+          <div className="pain-points-image">
+            <img src={myucdorgImage} alt="Original myucdavis website interface" />
+          </div>
         </div>
 
         <div className="persona">

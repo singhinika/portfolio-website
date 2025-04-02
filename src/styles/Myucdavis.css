@@ -42,6 +42,28 @@
   font-weight: 500;
 }
 
+.pain-points-container {
+  display: grid;
+  grid-template-columns: 400px 600px;
+  gap: 3rem;
+  margin: 2rem 0;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.pain-points-image {
+  width: 550px;
+  height: 350px;
+  margin-top: -0.5rem;
+}
+
+.pain-points-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+}
+
 .case-study p,
 .pain-points li,
 .next-steps li,
@@ -96,17 +118,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #f8f8f8;
-  border-radius: 20px;
-  overflow: hidden;
 }
 
 .demo-video {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  border-radius: 20px;
-  background: #f8f8f8;
   display: block;
 }
 
@@ -130,15 +147,10 @@
 }
 
 .redesign-point {
-  background: #f8f8f8;
-  padding: 2rem;
-  border-radius: 20px;
-  transition: transform 0.3s ease;
+  padding: 0;
 }
 
-.redesign-point:hover {
-  transform: translateY(-5px);
-}
+
 
 .redesign-point h4 {
   color: #2A9D8F;
