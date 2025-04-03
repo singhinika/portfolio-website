@@ -4,7 +4,7 @@ import artboardImage from '../assets/artboard.png';
 import brainstormImage from '../assets/brainstormartboard.png';
 import navMapImage from '../assets/navmapartboard.png';
 import personasImage from '../assets/personasartboard.png';
-import demoVideo from '../assets/final.mov';
+import demoVideo from '../assets/final.mp4';
 import image1 from '../assets/1.png';
 import image2 from '../assets/2.png';
 import image3 from '../assets/3.png';

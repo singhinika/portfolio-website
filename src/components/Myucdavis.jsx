@@ -3,7 +3,7 @@ import '../styles/Myucdavis.css';
 
 import myucdavisImage from '../assets/myucdavis.png';
 import myucdhomeImage from '../assets/myucdhome.png';
-import myucdfinalVideo from '../assets/myucdfinal.mov';
+import myucdfinalVideo from '../assets/myucdfinal.mp4';
 import userImage from '../assets/user.png';
 import wireframe1 from '../assets/wireframe1.png';
 import wireframe2 from '../assets/wireframe2.png';
