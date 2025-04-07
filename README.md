@@ -1,5 +1,7 @@
 # Portfolio Website
 
+Find my portfolio at [inikasingh.com](https://inikasingh.com)!
+
 A modern portfolio website built with React and Express, featuring a unique design with blob shapes and a bento box layout for the photography section.
 
 ## Features
