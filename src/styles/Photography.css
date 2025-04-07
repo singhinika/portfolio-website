@@ -1,6 +1,70 @@
 .photography {
   padding: 6rem 2rem 2rem;
   min-height: 100vh;
+  background-color: #f8f9fa;
+}
+
+.featured-gallery {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  padding: 0 1rem;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: translateY(-5px);
+}
+
+.gallery-item.large {
+  grid-column: span 2;
+  aspect-ratio: 16/9;
+}
+
+.gallery-item.wide {
+  grid-column: span 2;
+  aspect-ratio: 16/9;
+}
+
+.gallery-item.tall {
+  grid-row: span 2;
+  aspect-ratio: 3/4;
+}
+
+.behance-link {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.behance-link a {
+  color: #333;
+  text-decoration: none;
+  font-size: 1.1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.behance-link a:hover {
+  background: rgba(0, 0, 0, 0.05);
 }
 
 .bento-grid {
@@ -13,9 +77,9 @@
 
 .bento-item {
   position: relative;
-  border-radius: 8px;
-  overflow: hidden;
   aspect-ratio: 1;
+  overflow: hidden;
+  cursor: pointer;
 }
 
 .bento-item img {
@@ -42,11 +106,51 @@
   grid-row: span 2;
 }
 
-.category-buttons {
+.expanded-photo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.9);
   display: flex;
+  align-items: center;
   justify-content: center;
-  gap: 1rem;
-  margin-top: 2rem;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+.expanded-photo img {
+  max-height: 90vh;
+  max-width: 90vw;
+  object-fit: contain;
+}
+
+@media (max-width: 1024px) {
+  .bento-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .bento-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .bento-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .large, .wide {
+    grid-column: span 2;
+  }
+  
+  .tall {
+    grid-row: span 2;
+  }
 }
 
 .category-btn {

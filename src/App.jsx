@@ -1,17 +1,36 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import './App.css';
 import ScrollToTop from './components/ScrollToTop';
 import Home from './components/Home';
 import About from './components/About';
 import Design from './components/Design';
+import Photography from './components/Photography';
 
 import Footer from './components/Footer';
 import Mord from './components/Mord';
 import Myucdavis from './components/Myucdavis';
 import Artboard from './components/Artboard';
 import './styles/App.css';
+import MobileMessage from './components/MobileMessage';
 
 function App() {
+  const [isMobileSize, setIsMobileSize] = useState(false);
+
+  useEffect(() => {
+    const checkSize = () => {
+      setIsMobileSize(window.innerWidth < 654 || window.innerHeight < 707);
+    };
+
+    checkSize();
+    window.addEventListener('resize', checkSize);
+
+    return () => window.removeEventListener('resize', checkSize);
+  }, []);
+
+  if (isMobileSize) {
+    return <MobileMessage />;
+  }
   return (
     <Router>
       <ScrollToTop />
@@ -20,6 +39,7 @@ function App() {
           <Link to="/" className="nav-link">IS.</Link>
           <div className="nav-right">
             <Link to="/design" className="nav-link">design</Link>
+            <a href="https://inikasinghphoto.my.canva.site/landscapeandcity" className="nav-link">photography</a>
             <Link to="/" className="nav-link">about</Link>
           </div>
         </nav>
@@ -29,6 +49,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/design" element={<Design />} />
+            <Route path="/photography" element={<Photography />} />
 
             <Route path="/mord" element={<Mord />} />
             <Route path="/myucdavis" element={<Myucdavis />} />
