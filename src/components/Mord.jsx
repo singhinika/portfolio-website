@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from 'react';
-import MobilePopup from './MobilePopup';
+import React, { useEffect } from 'react';
 import '../styles/Mord.css';
 import mordImage from '../assets/mord.png';
 import mordmsgImage from '../assets/mordmsg.png';
@@ -8,32 +7,11 @@ import mordnavmapImage from '../assets/mordnavmap.png';
 import menuImage from '../assets/menu.png';
 
 function Mord() {
-  const [showPopup, setShowPopup] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
-
   useEffect(() => {
     window.scrollTo(0, 0);
-    // Check mobile and show popup immediately
-    const isMobileView = window.innerWidth <= 768;
-    setIsMobile(isMobileView);
-    if (isMobileView) {
-      setShowPopup(true);
-    }
-  }, []);
-
-  useEffect(() => {
-    const handleResize = () => {
-      const isMobileView = window.innerWidth <= 768;
-      setIsMobile(isMobileView);
-      setShowPopup(isMobileView);
-    };
-
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
   }, []);
 
   return (
-    <>
     <div className="case-study">
       <div className="cover-image">
         <img src={mordImage} alt="MORD app interface" />
@@ -143,11 +121,6 @@ function Mord() {
         <p>MORD effectively addresses the communication and resource access challenges faced by UC Davis freshmen. By centralizing essential information, enhancing messaging capabilities, and automating important announcements, MORD creates a smoother and more connected dorm experience, helping students successfully transition into college life.</p>
       </section>
     </div>
-      <MobilePopup 
-        isOpen={showPopup} 
-        onClose={() => setShowPopup(false)} 
-      />
-    </>
   );
 }
 

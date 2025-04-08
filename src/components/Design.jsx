@@ -24,11 +24,8 @@ function Design() {
 
   const handleProjectClick = (e, link) => {
     if (isMobile) {
-      navigate(link);
-      // Show popup after a short delay to allow navigation to complete
-      setTimeout(() => {
-        setShowPopup(true);
-      }, 100);
+      e.preventDefault();
+      setShowPopup(true);
     } else {
       navigate(link);
     }

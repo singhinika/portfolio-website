@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from 'react';
-import MobilePopup from './MobilePopup';
+import React, { useEffect } from 'react';
 import '../styles/Artboard.css';
 import artboardImage from '../assets/artboard.png';
 import brainstormImage from '../assets/brainstormartboard.png';
@@ -12,32 +11,11 @@ import image3 from '../assets/3.png';
 import image4 from '../assets/4.png';
 
 function Artboard() {
-  const [showPopup, setShowPopup] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
-
   useEffect(() => {
     window.scrollTo(0, 0);
-    // Check mobile and show popup immediately
-    const isMobileView = window.innerWidth <= 768;
-    setIsMobile(isMobileView);
-    if (isMobileView) {
-      setShowPopup(true);
-    }
-  }, []);
-
-  useEffect(() => {
-    const handleResize = () => {
-      const isMobileView = window.innerWidth <= 768;
-      setIsMobile(isMobileView);
-      setShowPopup(isMobileView);
-    };
-
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
   }, []);
 
   return (
-    <>
     <div className="case-study">
       <div className="cover-image">
         <img src={artboardImage} alt="artboard app interface" />
@@ -189,11 +167,6 @@ function Artboard() {
         </div>
       </section>
     </div>
-    <MobilePopup 
-      isOpen={showPopup} 
-      onClose={() => setShowPopup(false)} 
-    />
-    </>
   );
 }
 

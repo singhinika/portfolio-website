@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from 'react';
-import MobilePopup from './MobilePopup';
+import React, { useEffect } from 'react';
 import '../styles/Myucdavis.css';
 
 import myucdavisImage from '../assets/myucdavis.png';
@@ -12,32 +11,11 @@ import wireframe3 from '../assets/wireframe3.png';
 import myucdorgImage from '../assets/myucdorg.png';
 
 function Myucdavis() {
-  const [showPopup, setShowPopup] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
-
   useEffect(() => {
     window.scrollTo(0, 0);
-    // Check mobile and show popup immediately
-    const isMobileView = window.innerWidth <= 768;
-    setIsMobile(isMobileView);
-    if (isMobileView) {
-      setShowPopup(true);
-    }
-  }, []);
-
-  useEffect(() => {
-    const handleResize = () => {
-      const isMobileView = window.innerWidth <= 768;
-      setIsMobile(isMobileView);
-      setShowPopup(isMobileView);
-    };
-
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
   }, []);
 
   return (
-    <>
     <div className="case-study">
       <div className="cover-image">
         <img src={myucdavisImage} alt="myucdavis app interface" />
@@ -171,11 +149,6 @@ function Myucdavis() {
         <p>This redesign was an opportunity to create a more effective and accessible solution for UC Davis students. The app's improved navigation, accessibility, and aesthetics reflect the valuable insights we gathered from students, and we believe it will help make their college lives easier and more organized.</p>
       </section>
     </div>
-      <MobilePopup 
-        isOpen={showPopup} 
-        onClose={() => setShowPopup(false)} 
-      />
-    </>
   );
 }
 
