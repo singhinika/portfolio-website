@@ -5,6 +5,33 @@
   padding-top: 5rem;
 }
 
+@media (max-width: 768px) {
+  .case-study {
+    padding-top: 70px;
+  }
+
+  .cover-image {
+    width: 100%;
+    margin: 0;
+    padding: 1rem;
+  }
+
+  .cover-image img {
+    width: 100%;
+    height: auto;
+    margin-top: 0;
+  }
+
+  .case-study section {
+    padding: 0 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .overview {
+    padding-top: 2rem;
+  }
+}
+
 .cover-image {
   width: 65%;
   max-width: 800px;

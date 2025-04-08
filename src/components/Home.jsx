@@ -16,7 +16,7 @@ function Home() {
             <p className="description">
               <span className="tab">1.</span> user-centered product designer
               <br />
-              <span className="tab">2.</span> studying cognitive science @ UC Davis
+              <span className="tab">2.</span> studying Computational Cognitive Science @ UC Davis
             </p>
             <Link to="/design" className="projects-button">
               projects ▾

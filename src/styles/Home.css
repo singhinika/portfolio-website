@@ -33,6 +33,42 @@
   -webkit-transform-style: preserve-3d;
 }
 
+/* Mobile styles */
+@media (max-width: 768px) {
+  .blob-container {
+    aspect-ratio: 2/3; /* Vertical aspect ratio for mobile */
+    margin-top: 2rem;
+    width: 95%;
+  }
+
+  .blob-shape {
+    padding: 1.5rem;
+  }
+
+  .content {
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .content h1 {
+    font-size: 2.5rem;
+  }
+
+  .description {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .tab {
+    width: 1rem;
+  }
+
+  .projects-button {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+  }
+}
+
 @keyframes blobAnimation {
   0% {
     border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;

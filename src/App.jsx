@@ -12,25 +12,9 @@ import Mord from './components/Mord';
 import Myucdavis from './components/Myucdavis';
 import Artboard from './components/Artboard';
 import './styles/App.css';
-import MobileMessage from './components/MobileMessage';
 
 function App() {
-  const [isMobileSize, setIsMobileSize] = useState(false);
 
-  useEffect(() => {
-    const checkSize = () => {
-      setIsMobileSize(window.innerWidth < 654 || window.innerHeight < 707);
-    };
-
-    checkSize();
-    window.addEventListener('resize', checkSize);
-
-    return () => window.removeEventListener('resize', checkSize);
-  }, []);
-
-  if (isMobileSize) {
-    return <MobileMessage />;
-  }
   return (
     <Router>
       <ScrollToTop />
@@ -40,7 +24,12 @@ function App() {
           <div className="nav-right">
             <Link to="/design" className="nav-link">design</Link>
             <a href="https://inikasinghphoto.my.canva.site/landscapeandcity" className="nav-link">photography</a>
-            <Link to="/" className="nav-link">about</Link>
+            <Link to="/" className="nav-link" onClick={(e) => {
+              if (window.innerWidth <= 768) {
+                e.preventDefault();
+                window.location.href = '/';
+              }
+            }}>about</Link>
           </div>
         </nav>
 
